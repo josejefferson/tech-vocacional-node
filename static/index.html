@@ -25,10 +25,10 @@
           informações, aprimorar o nosso teste!
         </p>
         <form action="/formulario" method="post">
-          <input type="text" placeholder="Nome" id="nome" name="nome" />
-          <input type="email" placeholder="E-mail" id="email" name="email" />
-          <input type="number" placeholder="Idade" id="idade" name="idade" />
-          <input type="text" placeholder="Escola" id="escola" name="escola" />
+          <input type="text" placeholder="Nome" id="nome" name="nome" required />
+          <input type="email" placeholder="E-mail" id="email" name="email" required />
+          <input type="number" placeholder="Idade" id="idade" name="idade" min="0" max="120" required />
+          <input type="text" placeholder="Escola" id="escola" name="escola" required />
           <input type="submit" value="Enviar >" />
         </form>
       </aside>
