@@ -1,0 +1,19 @@
+{
+  "name": "tech-vocacional",
+  "version": "1.0.0",
+  "description": "Tech Vocacional",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jefferson Dantas",
+  "dependencies": {
+    "decision-tree": "^0.3.7",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "postgres": "^3.3.5",
+    "sequelize": "^6.32.1"
+  }
+}

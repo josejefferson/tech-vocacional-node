@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionário</title>
+
+    <link href="/styles/styles_forms/style.css" rel="stylesheet" />
+    <link href="/styles/styles_forms/loading.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <div class="content">
+        <span class="spnQtd"></span>
+        <span class="question"></span>
+        <div class="answers"></div>
+        <div class="loading-container" style="display: none">
+          <div class="dominoes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campo oculto para armazenar os dados do usuario -->
+      <input type="hidden" id="nome" value="<%= nome %>" />
+      <input type="hidden" id="email" value="<%= email %>" />
+      <input type="hidden" id="idade" value="<%= idade %>" />
+      <input type="hidden" id="escola" value="<%= escola %>" />
+    </main>
+
+    <script src="/js/script.js" type="module"></script>
+  </body>
+</html>

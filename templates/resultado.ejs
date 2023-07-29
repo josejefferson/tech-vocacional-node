@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles/styles_profissoes/style.css" rel="stylesheet" />
+    <title>Resultado</title>
+  </head>
+
+  <body>
+    <h1 class="title-result">Resultado</h1>
+    <h3 class="result"><%= profissao %></h3>
+    <img src="/components/images/<%= imagem %>" alt="Imagem da profissão" />
+    <p class="descricao">Descrição: <%= descricao %></p>
+
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    <div class="btn-avaliacao">
+      <button class="btn" id="green" onclick="myFunctionGreen()">
+        <i class="fa fa-thumbs-up fa-lg" aria-hidden="true" onclick=""></i>
+      </button>
+      <button class="btn" id="red" onclick="myFunctionRed()">
+        <i class="fa fa-thumbs-down fa-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <a class="btn-saiba" href="<%= link %>">
+      <button class="blob-btn">
+        Saiba Mais
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </button>
+      <br />
+    </a>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+            result="goo"
+          ></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+
+    <p>
+      Embora nosso teste vocacional seja útil, é importante ressaltar que ele não abrange completamente a necessidade do
+      autoconhecimento ao decidir uma carreira na área de tecnologia. Recomendamos complementar sua jornada com reflexão
+      pessoal, pesquisa e conversas com profissionais. Desejamos sucesso em sua busca pela carreira ideal.
+    </p>
+
+    <input type="hidden" id="token" value="<%= token %>" />
+
+    <footer>
+      <p>
+        desenvolvido por:
+        <a href="https://darlan-almeida.github.io/portifolio/"> Darlan Almeida </a>
+      </p>
+    </footer>
+
+    <script src="/js/avaliacao.js"></script>
+  </body>
+</html>

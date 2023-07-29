@@ -1,0 +1,225 @@
+
+body{
+  background-color: rgb(34, 34, 34);
+  color: white;
+  font-family: poppinsregular;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.title-result{
+  font-size: 40px;
+  margin-bottom: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.result{
+max-width: 100%;
+font-size: 50px;
+margin-left: 5%;
+
+}
+
+
+main{
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+h2{
+  font-size: 56px;
+  line-height: 10px;
+  font-family: poppinsmedium;
+}
+
+span{
+  color: rgb(132, 14, 201);
+}
+
+img{
+  max-width: 50%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.descricao {
+font-size: 20px;
+}
+
+/* button avaliacão */
+
+.btn{
+  cursor: pointer;
+  outline: 0;
+  color: #AAA;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.green{
+  color: green;
+}
+
+.red{
+  color: red;
+}
+.btn{
+display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+
+/* button saiba mais */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin-left: 0;
+  padding: 0;
+}
+
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color:rgb(132, 14, 201);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+  margin: 10% auto 30px; /* Ajusta a margem para centralizar horizontalmente e define margem superior e inferior */
+  display: block; /* Garante que o elemento seja exibido como um bloco */
+  max-width: 200px; /* Define uma largura máxima para o botão */
+}
+
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgb(132, 14, 201);;
+  border-radius: 30px;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+.blob-btn:hover {
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: rgb(132, 14, 201);
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+a{
+  color: rgb(132, 14, 201);
+}
+
+footer {
+  margin-top: 60px; 
+  bottom: 0;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
